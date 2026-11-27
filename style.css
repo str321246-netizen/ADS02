@@ -182,7 +182,7 @@ ul { list-style: none; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: url("https://images.pexels.com/photos/2294400/pexels-photo-2294400.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+  background: url("./images/hero.webp") center/cover no-repeat;
   transform: scale(1.08);
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
