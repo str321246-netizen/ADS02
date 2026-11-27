@@ -666,3 +666,68 @@ ul { list-style: none; }
   .schedule-row { font-size: 11px; }
   .schedule-row > div { padding: 10px 2px; }
 }
+
+/* ===== Knowledge ===== */
+.knowledge { padding: 100px 0; background: var(--paper); }
+.knowledge-intro { margin-top: 10px; color: var(--gray-d); }
+.knowledge-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.knowledge-nav a {
+  padding: 8px 18px;
+  border: 1px solid var(--line-d);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.knowledge-nav a:hover, .knowledge-nav a:focus-visible { background: var(--green-soft); }
+.knowledge-group { margin-top: 36px; }
+.knowledge-group h3 {
+  margin-bottom: 14px;
+  padding-left: 12px;
+  border-left: 3px solid var(--green);
+  font-size: 1.25rem;
+}
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  align-items: start;
+  gap: 16px;
+}
+.knowledge-card {
+  border: 1px solid var(--line-d);
+  border-radius: var(--r);
+  background: var(--white);
+}
+.knowledge-card summary {
+  position: relative;
+  padding: 20px 52px 20px 20px;
+  border-radius: var(--r);
+  cursor: pointer;
+  list-style: none;
+}
+.knowledge-card summary::-webkit-details-marker { display: none; }
+.knowledge-card summary::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 22px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--green-d);
+  border-bottom: 2px solid var(--green-d);
+  transform: rotate(45deg);
+}
+.knowledge-card[open] summary::after { transform: rotate(225deg); }
+.knowledge-card summary:hover { background: var(--green-soft); }
+.knowledge-card-title { display: block; font-size: 1.08rem; font-weight: 700; }
+.knowledge-card-description { display: block; margin-top: 5px; color: var(--gray-d); font-size: 0.92rem; }
+.knowledge-copy {
+  margin: 0 20px;
+  padding: 16px 0 20px;
+  border-top: 1px solid var(--line-d);
+}
+.knowledge-copy p + p { margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .knowledge { padding: 72px 0; }
+}
